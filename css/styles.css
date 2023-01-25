@@ -130,22 +130,32 @@ a, p, ul, h1,h2,h3 {
 
 
             /*Process*/
+section.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 
+div.container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
             /*Header*/
 
 header {
-    border: 1px solid var(--footer-small-text-color);
+    border-bottom: 1px solid var(--footer-small-text-color);
 }
 
-nav.nav-container {     
+div.container.nav {     
     display: flex;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px 15px;
     max-width: 1158px;
     justify-content: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
-            
 
             /*Logo section*/
 
@@ -227,38 +237,35 @@ a.contact {
     padding-bottom: 15px;
 }
 
-
-
-
                 /*Hero section*/
 
-div.hero {
+section.section-hero {
+    box-sizing: content-box;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-color: var(--title-color);
+}
+
+div.container-hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--title-color);
-    width: 100%;
-    height: 603px;
-   
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 48px;
 }
 
 h1.hero-text {
     display: block;
     max-width: 496px;
-    margin-bottom: 48px;
-    
 }
 
 
             /*Features section*/
-
-div.features-container {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    max-width: 1158px;
-    margin: auto;
-}
 
 ul.features {
    display: flex;
@@ -270,11 +277,11 @@ h3.features-list {
     margin-bottom: 8px;
 }
 
-            /*WAWD section*/
+            
 
-.wawd-container {
-    max-width: 1158px;
-    margin: auto;
+            /*WAWD section*/
+section.wawd-section {
+    padding-top: 0;
     padding-bottom: 120px;
 }
 
@@ -295,9 +302,10 @@ section.team-section {
 
 .team-container {
     max-width: 1158px;
-    margin: auto;
-    padding-bottom: 120px;
-    padding-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 h2.team-section {
@@ -306,25 +314,32 @@ h2.team-section {
 
 ul.team-section {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
     justify-content: center;
+    margin-top: -24px;
+    margin-left: -24px;
 }
 
-div.team-member {
+li.team-card {
+    margin-top: 24px;
+    margin-left: 24px;
+    width: 500px;
+    flex-basis: calc( 100% / 4 - 24px ); 
+}
+
+div.team-member-info {
     background-color: var(--main-white-color);
-    max-width: 264px;
-    max-height: 380px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     text-align: center;
-    box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 1px 6px 0px #2E2F4214;
-    padding-bottom: 32px;
+    border: 1px solid var(--footer-small-text-color);
+    border-top: none;
 }
 
 img.team-image {
-    margin-bottom: 32px;
-}
-
-h3.team-section {
-    margin-bottom: 8px;
+    display: block;
+    max-width: 100%;
+    max-height: auto;
 }
 
             /*Footer section*/
@@ -332,15 +347,8 @@ h3.team-section {
 footer.footer-section{
     background-color: var(--title-color);
     width: 100%;
-    height: 310px;
-}
-
-div.footer-container {
-    max-width: 1158px;
-    margin: auto;
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left: 15px;
 }
 
 .footer .logo-finish {
@@ -385,7 +393,7 @@ ul.list.nav-potfolio {
     display: flex;
     gap: 24px;
     justify-content: center;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 
 ul.gallery.list {
@@ -399,7 +407,6 @@ li.card-item {
    flex-basis: calc( 100% / 3 - 24px );  
    margin-top: 24px;
    margin-left: 24px;
-   margin-bottom: 24px;
 }
 
 div.work-describe {
@@ -413,12 +420,11 @@ div.gallery-pic>img {
     max-height: auto;
 }
 
-h2.work-title {
+h.work-title {
     margin-bottom: 8px;
 }
 
-/*Питання:
-1) Якщо на стор. є заголовок категорії h3, то полюбому на цій сторінці сторінці мають бути і h2 i h1???? Я так розумію що h1 заховати ми не можемо!!!
-2) container один для сторінки, чи один для кожної секції?
 
-Чекаю критики, переробляв все як мінімум три рази)))
+
+
+
